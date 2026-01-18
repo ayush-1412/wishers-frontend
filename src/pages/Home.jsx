@@ -23,7 +23,7 @@ function Home() {
 
   const handleSuccess = async (credentialResponse) => {
     try {
-      const res = await axios.post(
+      const res = await api.post(
         "https://wishers-backend.onrender.com/api/auth/google",
         {
           token: credentialResponse.credential,
