@@ -16,7 +16,8 @@ function WishPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/wish/${id}`)
+      .get(`http://https://wishers-backend.onrender.com/api/auth/google
+/api/wish/${id}`)
       .then((res) => setWish(res.data));
   }, [id]);
 
