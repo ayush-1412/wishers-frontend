@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate, useSearchParams } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 import confetti from "canvas-confetti";
 
 function WishPage() {

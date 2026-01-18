@@ -1,7 +1,8 @@
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api";
+
 
 function Home() {
   const navigate = useNavigate();
