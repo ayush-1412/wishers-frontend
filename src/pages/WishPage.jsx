@@ -15,10 +15,13 @@ function WishPage() {
   const confettiPlayed = useRef(false);
 
   useEffect(() => {
-    api.get(`https://wishers-backend.onrender.com/api/auth/google
-/api/wish/${id}`)
-      .then((res) => setWish(res.data));
-  }, [id]);
+  api.get(`/api/wish/${id}`)
+    .then((res) => setWish(res.data))
+    .catch(() => {
+      alert("Wish not found");
+    });
+}, [id]);
+
 
   // 🎊 Confetti once
   useEffect(() => {
