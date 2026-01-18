@@ -15,8 +15,7 @@ function WishPage() {
   const confettiPlayed = useRef(false);
 
   useEffect(() => {
-    axios
-      .get(`https://wishers-backend.onrender.com/api/auth/google
+    api.get(`https://wishers-backend.onrender.com/api/auth/google
 /api/wish/${id}`)
       .then((res) => setWish(res.data));
   }, [id]);
